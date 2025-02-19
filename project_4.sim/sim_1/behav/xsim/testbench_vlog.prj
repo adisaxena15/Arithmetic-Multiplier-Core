@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../project_4.srcs/sources_1/new/control.sv" \
+"../../../../project_4.srcs/sources_1/new/hex_driver.sv" \
+"../../../../project_4.srcs/sources_1/new/load_reg.sv" \
+"../../../../project_4.srcs/sources_1/new/register8.sv" \
+"../../../../project_4.srcs/sources_1/new/register9.sv" \
+"../../../../project_4.srcs/sources_1/new/ripple_adder.sv" \
+"../../../../project_4.srcs/sources_1/new/synchronizer.sv" \
+"../../../../project_4.srcs/sources_1/new/toplevel.sv" \
+"../../../../hello/Lab 3/Lab 3.srcs/sim_1/new/testbench.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
