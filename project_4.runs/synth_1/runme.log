@@ -1,0 +1,499 @@
+
+*** Running vivado
+    with args -log toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source toplevel.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source toplevel.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 395.336 ; gain = 43.805
+Command: read_checkpoint -auto_incremental -incremental C:/Users/adity/Downloads/project_4.srcs/utils_1/imports/synth_1/toplevel.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/adity/Downloads/project_4.srcs/utils_1/imports/synth_1/toplevel.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top toplevel -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39900
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'q' is not allowed [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/synchronizer.sv:14]
+INFO: [Synth 8-11241] undeclared symbol 'reset_clearA_loadB_s', assumed default net type 'wire' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/toplevel.sv:16]
+INFO: [Synth 8-11241] undeclared symbol 'execute_s', assumed default net type 'wire' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/toplevel.sv:16]
+WARNING: [Synth 8-8895] 'reset_clearA_loadB_s' is already implicitly declared on line 16 [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/toplevel.sv:36]
+WARNING: [Synth 8-8895] 'execute_s' is already implicitly declared on line 16 [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/toplevel.sv:36]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1202.215 ; gain = 408.340
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'toplevel' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/toplevel.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'controlUnit' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/control.sv:1]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/control.sv:100]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/control.sv:126]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/control.sv:136]
+INFO: [Synth 8-6155] done synthesizing module 'controlUnit' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/control.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ADDER9' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/ripple_adder.sv:7]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/ripple_adder.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/ripple_adder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/ripple_adder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ADDER9' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/ripple_adder.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'register9' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/register9.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'register9' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/register9.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'register8' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/register8.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'register8' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/register8.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sync_debounce' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/synchronizer.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'sync_debounce' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/synchronizer.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'load_reg' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/load_reg.sv:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'load_reg' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/load_reg.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'hex_driver' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/hex_driver.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'toplevel' (0#1) [C:/Users/adity/Downloads/project_4.srcs/sources_1/new/toplevel.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.867 ; gain = 498.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.867 ; gain = 498.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.867 ; gain = 498.992
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1292.867 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw_i[15]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[14]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[13]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[12]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[11]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[10]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[9]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[8]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[8]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[9]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sign_led'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sign_led'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[7]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[6]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[5]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[4]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[7]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[6]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[5]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[4]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[4]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[5]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[6]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[7]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[4]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[5]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[6]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[7]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[0]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[1]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[2]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[3]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[10]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[11]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[12]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[13]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[14]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw_i[15]'. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/adity/Downloads/project_4.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1383.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1383.699 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'controlUnit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   RESET |            000000000000000000001 |                            00000
+                 RESET_A |            000000000000000000010 |                            10100
+                   ADD_0 |            000000000000000000100 |                            00001
+                 SHIFT_0 |            000000000000000001000 |                            00010
+                   ADD_1 |            000000000000000010000 |                            00011
+                 SHIFT_1 |            000000000000000100000 |                            00100
+                   ADD_2 |            000000000000001000000 |                            00101
+                 SHIFT_2 |            000000000000010000000 |                            00110
+                   ADD_3 |            000000000000100000000 |                            00111
+                 SHIFT_3 |            000000000001000000000 |                            01000
+                   ADD_4 |            000000000010000000000 |                            01001
+                 SHIFT_4 |            000000000100000000000 |                            01010
+                   ADD_5 |            000000001000000000000 |                            01011
+                 SHIFT_5 |            000000010000000000000 |                            01100
+                   ADD_6 |            000000100000000000000 |                            01101
+                 SHIFT_6 |            000001000000000000000 |                            01110
+                     SUB |            000010000000000000000 |                            01111
+                 SHIFT_7 |            000100000000000000000 |                            10000
+                    DONE |            001000000000000000000 |                            10001
+                    WAIT |            010000000000000000000 |                            10010
+                     SMD |            100000000000000000000 |                            10011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'controlUnit'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 9     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	  21 Input   21 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design toplevel has port hex_seg[7] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    13|
+|3     |LUT1   |     5|
+|4     |LUT2   |     4|
+|5     |LUT3   |    21|
+|6     |LUT4   |    23|
+|7     |LUT5   |     6|
+|8     |LUT6   |    32|
+|9     |FDRE   |   100|
+|10    |FDSE   |     1|
+|11    |IBUF   |    11|
+|12    |OBUF   |    29|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 1383.699 ; gain = 498.992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1383.699 ; gain = 589.824
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1383.699 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1383.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d0d80e12
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 71 Warnings, 66 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:41 . Memory (MB): peak = 1383.699 ; gain = 963.504
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adity/Downloads/project_4.runs/synth_1/toplevel.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file toplevel_utilization_synth.rpt -pb toplevel_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 16:29:47 2025...

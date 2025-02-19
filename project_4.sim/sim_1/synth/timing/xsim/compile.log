@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/adity/Downloads/project_4.sim/sim_1/synth/timing/xsim/testbench_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-311] analyzing module hex_driver
+INFO: [VRFC 10-311] analyzing module load_reg
+INFO: [VRFC 10-311] analyzing module register8
+INFO: [VRFC 10-311] analyzing module register9
+INFO: [VRFC 10-311] analyzing module sync_debounce
+INFO: [VRFC 10-311] analyzing module sync_debounce_0
+INFO: [VRFC 10-311] analyzing module toplevel
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adity/Downloads/hello/Lab 3/Lab 3.srcs/sim_1/new/testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
