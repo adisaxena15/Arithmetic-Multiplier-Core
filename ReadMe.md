@@ -1,4 +1,4 @@
-# Lab 4 – 8-Bit Multiplier in SystemVerilog
+# Arithmetic Multiplier Core
 
 ## Overview
 This project implements an **8-bit signed multiplier** in SystemVerilog using the **add-shift multiplication algorithm**.  
